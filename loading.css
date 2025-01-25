@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Pontano+Sans:wght@300..700&display=swap');
+* {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+body {
+    background-color: #333;      
+      animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    background-color: #333;
+    color: white;
+
+    padding: 20px;
+    text-align: left;
+}
+header p{
+    font-size: 1.2rem;
+}
+#logo{
+    text-shadow: 0px 0px 5px white;
+    
+}
+
+header h1 {
+    margin: 0;
+   
+}
+
+nav {
+    height: 40px;
+    text-align: right;
+    background-color: #444;
+   padding-top:10px ;
+}
+
+
+nav a {
+    color: white;
+    padding: 10px 25px;
+
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.hero {
+    background: url(https://png.pngtree.com/background/20230519/original/pngtree-store-with-hanging-clothing-in-a-high-end-environment-picture-image_2654941.jpg) no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    text-align: center;
+}
+
+.hero marquee {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.underline{
+    height: 3px;
+    width: 250px;
+    background-color: white;
+    margin-left: 50px;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+ 
+}
+
+.product {
+    width: 250px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+     padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product p {
+    color: black;
+}
+
+.product button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.product button a{
+    color: white;
+    text-decoration: none;
+}
+h2{
+    font-style: inherit;
+    margin-left: 70px;
+
+}
+
+.heading{
+    margin-top: 30px;
+    height: 50px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: transparent;
+    color:white;
+    font-size: 1.2rem;
+    display: flex;  
+    align-items: center;
+
+}
+
+.product button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer ul li a{
+    color: white;
+    text-decoration: none;
+}

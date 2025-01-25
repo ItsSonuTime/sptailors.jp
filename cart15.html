@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Container</title>
+</head>
+<body>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;   
+    animation: fadeIn 1s ease-in-out;
+  }@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    color: #222;
+  
+  }
+  h2{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .products,
+  .cart {
+    margin: 20px 0;
+  }
+  
+  .product-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product p {
+    margin: 10px 0;
+  }
+  
+  button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background: white;
+    color: black;
+    transition: 1s;
+  }
+  .cart {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #cart-items {
+    margin: 15px 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .checkout-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  </style>
+  <div class="container">
+    <header>
+      <h1>🛒 Shopping Cart</h1>
+    </header>
+
+    <section class="products">
+      <h2>Products</h2>
+      <div class="product-list">
+        <div class="product" data-id="11" data-name="Two Piece for Party Wears" data-price="1800">
+          <img src="https://i.pinimg.com/236x/1c/7d/f2/1c7df2b8ca735fa607966ffb533f1bd8.jpg" alt="Product 12" height="200px">
+          <h3>Two Piece for Party Wears </h3>
+          <p>₹ 1800</p>
+          <button onclick="addToCart(11)">Add to Cart</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cart">
+      <h2>Cart</h2>
+      <div id="cart-items"></div>
+      <p id="total-price">Total: $0.00</p>
+      <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
