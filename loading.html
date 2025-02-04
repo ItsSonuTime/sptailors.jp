@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Pontano+Sans:wght@300..700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #444;
+            font-family: "Playfair Display", serif;
+            overflow: hidden;
+        }
+
+        .loader-container {
+            text-align: center;
+        }
+
+        .loader {
+            border: 10px solid black;
+            border-radius: 50%;
+            border-top: 10px solid white;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            margin-top: 20px;
+            font-size: 18px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loader"></div>
+        <p class="loading-text">please wait...</p>
+    </div>
+
+    <script>
+        // Simulate loading delay before redirecting to the shop page
+        setTimeout(() => {
+            window.location.href = "nextpage.html";
+           // Replace with the URL of your shop page
+        }, 2000); // 3-second delay
+
+                // Simulate loading delay before redirecting to the shop page
+         
+    </script>
+</body>
+</html>
+

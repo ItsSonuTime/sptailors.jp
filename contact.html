@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Pontano+Sans:wght@300..700&display=swap');
+       *{
+        font-family: "Playfair Display", serif;
+      margin: 0;
+      padding: 0;
+
+       }
+
+       .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        background-color: #222;
+        animation: fadeIn 1s ease-in-out;
+     
+       }
+
+       @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+       .headimg{
+        height: 50px;
+        width: 100%;
+        align-items: center;
+        font-style: inherit;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        color: white;
+          }
+       .inputbox1{
+        height: 50px;
+        width: 100%;
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+       }
+       .inputbox2{
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+       }
+       .btn{
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       #Name::placeholder{
+        padding-left: 20px;
+       }
+       #Name{
+        height: 30px;
+        background-color: transparent;
+        border: 1.5px solid white;
+        color: white;
+        border-radius: 4px ;
+       }
+       #Email::placeholder{
+        padding-left: 20px;
+       }
+       #Number::placeholder{
+        padding-left: 20px;
+       }  
+       #Email{
+        height: 30px;
+        background-color: transparent;
+        border: 1.5px solid white;
+        color: white;
+        border-radius: 4px ;
+       }
+       #Number{
+        height: 30px;
+        background-color: transparent;
+        border: 1.5px solid white;
+        color: white;
+        border-radius: 4px ;
+       }
+       #Subject{
+        height: 30px;
+        
+        background-color: transparent;
+        border: 1.5px solid white;
+        color: white;
+        border-radius: 4px ;
+       }
+   
+       #message{
+        height: 100px;
+        border-radius: 4px ;
+        width: 100%;
+         margin-top: 20px;
+        background-color: transparent;
+        border: 1.5px solid white;
+        color: white;
+       }
+       #Subject::placeholder{
+        padding-left: 20px;
+       }
+       #message::placeholder{
+        padding-left: 20px;
+        padding-top: 5px;
+       }
+       button:hover{
+          background-color: white;
+          color: black;
+          transition: 0.5s;
+        }
+        button{
+          height: 40px;
+          width: 100px;
+          margin-top: 20px;
+          background-color: transparent;
+          border: 1.5px solid white;
+          color: white;
+          border-radius: 4px ;
+        }
+        .underline{
+          height: 2px;
+          width: 160px;
+          background-color: white;
+          margin-left: 80px;
+        }
+  </style>
+</head>
+
+<body>
+
+  <div class="container" >
+    <form  method="POST" >
+      <div class="headimg">
+      <h3> Contact Us</h3>
+     </div> 
+       <div class="underline"></div>
+
+     <div class="inputbox1">
+    
+      <input type="text"  id="Name" placeholder="Your name" required>
+      <input type="email"  id="Email" placeholder="Your Email" required>
+     </div>
+     <div class="inputbox2">
+      <input type="number"  id="Number" placeholder="Your Number" required>
+      <input type="Subject"  id="Subject" placeholder="Your Subject" required>
+     </div>
+ 
+     <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+       <div class="btn">
+        <button type="button" onclick="sendEmail()">Submit</button>
+       </div>
+      
+    </form>
+
+   </div>
+   
+
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+function sendEmail(){
+
+  
+
+
+
+
+  alert("your massage are sended")
+}
+
+   </script>
+</body>
+
+</html>

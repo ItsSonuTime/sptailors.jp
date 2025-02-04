@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailor Shop</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Playfair Display", serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #f4f4f9, #ececf6);
+      overflow-x: hidden;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      background: url(img\ 1.jpg) center/cover no-repeat;
+      color: white;
+    }
+
+    #element {
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #element2 {
+      font-size: 2rem;
+      margin-top: 20px;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #d35400;
+      border: none;
+      color: white;
+      text-transform: uppercase;
+      cursor: pointer;
+      animation: bounce 2s infinite;
+      border-radius: 5px;
+    }
+  button a{
+    color: white;
+    text-decoration: none;
+  }
+    .button:hover {
+      background-color: #e67e22;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div>
+      <div id="element"></div>
+      <div id="element2"></div>
+      <button class="button" > <a href="loading.html"> Go-To-Shop</a></button>
+    </div>
+ 
+  </section>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element' , {
+      strings: ["Welcome to Our Tailor Shop",],
+      typeSpeed: 50,
+    });
+
+    var typed = new Typed('#element2' , {
+      strings: ["Best sewing and Best Products" ,],
+      typeSpeed: 50,
+    });
+
+
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+  
+
+</body>
+</html>
